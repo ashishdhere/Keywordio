@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container py-3">
+    <h1 class="alert alert-info text-center">Update Details</h1>
+    <div class="row">
+        <div class="col-sm-8 offset-2">
+            <h2 class="alert alert-success text-center">Update Details</h2>
+            <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Update Books" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="container">
+    <h2 class="alert alert-success text-center">Book Details</h2>
+    <table class="table table-borderd">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Book Name</th>
+                <th>Book Author</th>
+                <th>Book Price</th>
+                <th>Book Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in ash  %}
+              <tr>
+                  <td>{{i.id}}</td>
+                  <td>{{i.book_name}}</td>
+                  <td>{{i.book_author}}</td>
+                  <td>{{i.book_price}}</td>
+                  <td>{{i.book_category}}</td>
+              </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+  
+{% endblock body %}
